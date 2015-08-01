@@ -19,7 +19,7 @@ var yesterday = previousDay(currentTime);
 
 
 currentDate = new Date(currentTime.getFullYear(),currentTime.getMonth(),currentTime.getDate());
-console.log(currentDate);
+//console.log(currentDate);
 $('#date').text(currentDate.toDateString());
 console.log('before for loop');
 var listOfEvents = [];
@@ -34,7 +34,7 @@ for (var i = 0;i < sampleLen; i++){
 
 }
 
-console.log("Going to sort array of events ");
+//console.log("Going to sort array of events ");
 
 addEvents(listOfEvents);
 }

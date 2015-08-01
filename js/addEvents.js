@@ -1,7 +1,7 @@
 function addEvents(listOfEvents){
-	console.log("inside addEvents ");
+	//console.log("inside addEvents ");
 	var tempDate123 = new Date(listOfEvents[0]['startTime']);
-	console.log(tempDate123.getHours());
+	//console.log(tempDate123.getHours());
 	$('#calenderDiv').text('');
 	/*
 	var timingsDictionary ={'0 AM':[0,59],'1 AM':[0,59],'2 AM':[0,59],'3 AM':[0,59],'4 AM':[0,59],'5 AM':[0,59],'6 AM':[0,59],'7 AM':[0,59],'8 AM':[0,59],'9 AM':[0,59],'10 AM':[0,59],'11 AM':[0,59],'12 PM':[0,59],'13 PM':[0,59],'14 PM':[0,59],'15 PM':[0,59],'16 PM':[0,59],'17 PM':[0,59],'18 PM':[0,59],'19 PM':[0,59],'20 PM':[0,59],'21 PM':[0,59],'22 PM':[0,59],'23 PM':[0,59]};
@@ -24,7 +24,7 @@ function addEvents(listOfEvents){
 			
 				var tempDate = new Date(listOfEvents[k]['startTime']);
 				var tempEndtime = new Date(listOfEvents[k]['endTime']);
-				console.log("k = "+tempDate.getHours() + " j= "+j);
+				//console.log("k = "+tempDate.getHours() + " j= "+j);
 				if (tempDate.getHours() >= j && tempDate.getHours() < j+1){
 				//temp = temp + listOfEvents[k].toDateString()+" , ";
 				list.append('<li>'+listOfEvents[k]['title']+'<br>'+'<p>'+tempDate.getHours()+':'+tempDate.getMinutes()+' '+timingsDictionary[tempDate.getHours()]+'-'+tempEndtime.getHours()+':'+tempEndtime.getMinutes()+' '+timingsDictionary[tempEndtime.getHours()]+'</p>'+'</li>');
@@ -36,7 +36,7 @@ function addEvents(listOfEvents){
 			//console.log("outside "+temp);
 			//var CalenderEventsCol = $("<p>").text(temp);
 			//var CalenderEventsColEnd = $("</p>");
-			console.log(list);
+			//console.log(list);
 			var timeColEnd = $("</div>");
 			var outerDivEnd = $("</div>");
 			var outerDivWithContentEnd = $("</div>");
