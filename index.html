@@ -41,9 +41,9 @@
          <div>
             <div class="row">
                <div class="col-md-3">
-                  <button type="button" id="today" onclick="Today()">Today</button>
-                  <button type="button" id="movePrevday" onclick="PreviousDay()">Previous Day</button> 
-                  <button type="button" id="moveTomorrow" onclick="NextDay()">Next Day</button>
+                  <button type="button" id="today" onclick="OnclickToday()">Today</button>
+                  <button type="button" id="movePrevday" onclick="OnclickPreviousDay()">Previous Day</button> 
+                  <button type="button" id="moveTomorrow" onclick="OnclickNextDay()">Next Day</button>
                </div>
                <div class="col-md-9">
                   <p id="date"></p>
@@ -86,10 +86,10 @@
       }
       aClient = new HttpClient();
       aClient.get('sample-data.json', function(response) {
-         
+
       sampleArray = JSON.parse(response);
       //console.log(sampleArray[0]['startTime']);
-      console.log('type of sample array '+typeof(sampleArray));
+      //console.log('type of sample array '+typeof(sampleArray));
       ProcessSampleData(sampleArray,VarDate);
       
       });
