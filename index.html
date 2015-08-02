@@ -22,7 +22,7 @@
       }
       
       .container{
-         background-color: #6B6665;
+         
       margin-top: 5%;
       margin-left: 5%;
       
@@ -33,18 +33,25 @@
       #calenderDiv{
       margin-right: 10%;
       }
-      .col-md-2,.col-md-10{
+      #TimeID,#EventsID{
          color: wheat;
+         font-size: 20px;
+         text-align: center;
       }
       #date{
          color : wheat;
          font-size: 20px;
       }
 
+      #calenderHead{
+      	background-color: #A72415;
+      }
+
+
    </style>
    <body>
       <div class="container">
-         <div>
+         <div id="calenderHead">
             <div class="row">
                <br>
                <div class="btn-group">
@@ -56,15 +63,24 @@
                   <p id="date"></p>
                </div>
             </div>
-            <br>
+
+            <div class="row">
+            	<div class="col-md-1" id="TimeID">
+            	<p>Time</p>
+            	</div>
+            	<div class="col-md-11" id="EventsID">
+            		<p>Events</p>
+            	</div>
+            </div>
          </div>
          <div id="EventsLog">
             <div class="row" id="header">
-               <div class="col-md-2">
-                  <p>Time</p>
+               <div class="col-md-2" >
+                  
                </div>
                <div class="col-md-10">
-                  <p>Events</p>
+
+                  
                   <ul id ="details">
                   </ul>
                </div>
@@ -75,6 +91,16 @@
       </div>
    </body>
    
+   <script>
+$(window).load(function(){
+    $(".eventsFound").hover(function(){
+        $(this).css("background-color", "#5D69A7");
+        }, function(){
+        $(this).css("background-color", "white");
+    });
+});
+</script>
+
    <script type="text/javascript">
       //$http.get("sample-data.json").success(function(response){console.log(response);});
       var sampleArray;
