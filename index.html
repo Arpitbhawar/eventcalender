@@ -14,36 +14,43 @@
    </head>
    <style type="text/css">
       .eventsFound{
-      background-color : #A23223;
+      
       margin-left: 10%;
       margin-right: 10%;
-      background-color: yellow;
+      background-color: #FAF3F1;
       box-shadow: 10px 10px 5px #888888;
       }
-      #Fillcolor
-      {
-      background-color : #000000;
-      }
+      
       .container{
+         background-color: #6B6665;
       margin-top: 5%;
       margin-left: 5%;
-      border: 12px solid #B22222;
-      border-radius: 10px;
+      
       margin-bottom: 10%;
       margin-right: 20%;
+      box-shadow: 10px 10px 5px #888888;
       }
       #calenderDiv{
       margin-right: 10%;
       }
+      .col-md-2,.col-md-10{
+         color: wheat;
+      }
+      #date{
+         color : wheat;
+         font-size: 20px;
+      }
+
    </style>
    <body>
       <div class="container">
          <div>
             <div class="row">
-               <div class="col-md-3">
-                  <button type="button" id="today" onclick="OnclickToday()">Today</button>
-                  <button type="button" id="movePrevday" onclick="OnclickPreviousDay()">Previous Day</button> 
-                  <button type="button" id="moveTomorrow" onclick="OnclickNextDay()">Next Day</button>
+               <br>
+               <div class="btn-group">
+                  <button type="button" id="today" class="btn btn-primary" onclick="OnclickToday()">Today</button>
+                  <button type="button" id="movePrevday" class="btn btn-primary" onclick="OnclickPreviousDay()">Previous Day</button> 
+                  <button type="button" id="moveTomorrow" class="btn btn-primary" onclick="OnclickNextDay()">Next Day</button>
                </div>
                <div class="col-md-9">
                   <p id="date"></p>

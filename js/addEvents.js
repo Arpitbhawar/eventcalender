@@ -43,6 +43,7 @@ function addEvents(listOfEvents){
 			
 			var varTimeCol = timeCol.append(calenderTimeStart.append(calenderTimeEnd));
 			//var varEventCol = CalenderEventsCol.append(CalenderEventsColEnd.append(timeColEnd.append(outerDivEnd)));
+			
 			var varEventCol = list.append(timeColEnd.append(outerDivEnd));
 
 			if (Flag === 0){
