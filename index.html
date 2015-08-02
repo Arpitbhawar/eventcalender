@@ -1,0 +1,104 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Event Calender</title>
+      <meta charset="utf-8">
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/bootstrap-combined.min.js"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <script src="js/functions.js"></script>
+      <script src="js/ProcessSampleData.js"></script>
+      <script src="js/addEvents.js"></script>
+   </head>
+   <style type="text/css">
+      .eventsFound{
+      
+      margin-left: 10%;
+      margin-right: 10%;
+      background-color: #FAF3F1;
+      box-shadow: 10px 10px 5px #888888;
+      }
+      
+      .container{
+         background-color: #6B6665;
+      margin-top: 5%;
+      margin-left: 5%;
+      
+      margin-bottom: 10%;
+      margin-right: 20%;
+      box-shadow: 10px 10px 5px #888888;
+      }
+      #calenderDiv{
+      margin-right: 10%;
+      }
+      .col-md-2,.col-md-10{
+         color: wheat;
+      }
+      #date{
+         color : wheat;
+         font-size: 20px;
+      }
+
+   </style>
+   <body>
+      <div class="container">
+         <div>
+            <div class="row">
+               <br>
+               <div class="btn-group">
+                  <button type="button" id="today" class="btn btn-primary" onclick="OnclickToday()">Today</button>
+                  <button type="button" id="movePrevday" class="btn btn-primary" onclick="OnclickPreviousDay()">Previous Day</button> 
+                  <button type="button" id="moveTomorrow" class="btn btn-primary" onclick="OnclickNextDay()">Next Day</button>
+               </div>
+               <div class="col-md-9">
+                  <p id="date"></p>
+               </div>
+            </div>
+            <br>
+         </div>
+         <div id="EventsLog">
+            <div class="row" id="header">
+               <div class="col-md-2">
+                  <p>Time</p>
+               </div>
+               <div class="col-md-10">
+                  <p>Events</p>
+                  <ul id ="details">
+                  </ul>
+               </div>
+            </div>
+            <div  id="calenderDiv">
+            </div>
+         </div>
+      </div>
+   </body>
+   
+   <script type="text/javascript">
+      //$http.get("sample-data.json").success(function(response){console.log(response);});
+      var sampleArray;
+      var VarDate = new Date();
+      var HttpClient = function() {
+         this.get = function(aURL, aCallback) {
+             var anHttpRequest = new XMLHttpRequest();
+             anHttpRequest.onreadystatechange = function() { 
+                 if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                     aCallback(anHttpRequest.responseText);
+             }
+      
+             anHttpRequest.open( "GET", aURL, true );            
+             anHttpRequest.send( null );
+         }
+      }
+      aClient = new HttpClient();
+      aClient.get('sample-data.json', function(response) {
+
+      sampleArray = JSON.parse(response);
+      //console.log(sampleArray[0]['startTime']);
+      //console.log('type of sample array '+typeof(sampleArray));
+      ProcessSampleData(sampleArray,VarDate);
+      
+      });
+   </script>
+</html>
