@@ -41,17 +41,17 @@
       #TimeID,#EventsID{
          color: wheat;
          font-size: 20px;
-         text-align: center;
+         text-align: left;
       }
-      #date{
+      #date,#EventCalenderHeader{
          color : wheat;
-         font-size: 20px;
+         font-size: 30px;
       }
 
       #calenderHead{
       	background-color: #A72415;
       }
-
+      
 
    </style>
    <body>
@@ -59,21 +59,24 @@
          <div id="calenderHead">
             <div class="row">
                <br>
-               <div class="btn-group">
+               <div class="col-md-4">
                   <button type="button" id="today" class="btn btn-primary" onclick="OnclickToday()">Today</button>
                   <button type="button" id="movePrevday" class="btn btn-primary" onclick="OnclickPreviousDay()">Previous Day</button> 
                   <button type="button" id="moveTomorrow" class="btn btn-primary" onclick="OnclickNextDay()">Next Day</button>
                </div>
-               <div class="col-md-9">
+               <div class="col-md-4">
                   <p id="date"></p>
+               </div>
+               <div class="col-md-4" id="EventCalenderHeader">
+                  <p>Event Calender</p>
                </div>
             </div>
 
             <div class="row">
-            	<div class="col-md-1" id="TimeID">
+            	<div class="col-md-2" id="TimeID">
             	<p>Time</p>
             	</div>
-            	<div class="col-md-11" id="EventsID">
+            	<div class="col-md-10" id="EventsID">
             		<p>Events</p>
             	</div>
             </div>
