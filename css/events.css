@@ -1,0 +1,33 @@
+.eventsFound{
+      
+      margin-left: 10%;
+      margin-right: 10%;
+      background-color: #9fa8da;
+      
+      font-weight: bold;
+      font-style: italic;
+      }
+      
+      .calender{
+      box-shadow: 1px 0px 10px #888888;
+      }
+      #calenderDiv{
+      margin-right: 10%;
+      }
+      #TimeID,#EventsID{
+         color: wheat;
+         font-size: 20px;
+         text-align: left;
+      }
+      #date,#EventCalenderHeader{
+         color : wheat;
+         font-size: 30px;
+      }
+
+      #calenderHead{
+      	background-color: #A72415;
+      }
+
+      #today,#movePrevday,#moveTomorrow{
+         background-color: "blue";
+      }
